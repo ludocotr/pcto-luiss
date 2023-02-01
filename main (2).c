@@ -7,26 +7,23 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-
-int main()
+void ft_ft(int*nbr, int*x, int y)
 {
-    float Celsius;
-    float Fahrenheit;
-    float Kelvin;
-    printf("inserisci la temperatura in Celsius\n");
-    scanf("%f",&Celsius);
-    
-    if (Celsius<-273.15)
-    {
- printf("errore\n");  
-    }
-else
-{
-    Fahrenheit=(9/5)*Celsius + 32;
-    Kelvin=Celsius + 273,15;
-    printf("la temperatura in Kelvin è %f\n",Kelvin);
-    printf("la temperatura in Fahrenheit è %f\n", Fahrenheit);
+*nbr=42;
+*x=10;
+y=102;
 }
+int main()
+{ 
+    int nbr=1;
+    int x=2;
+    int y=3;
+
+ 
+printf("il valore iniziale: %d %d %d \n",nbr,x,y);
+
+ft_ft(&nbr,&x,y);
+   printf("il valore effettivo dopo aver richiamato ft_ft: %d %d %d \n",nbr,x,y);
+   
     return 0;
 }
-
