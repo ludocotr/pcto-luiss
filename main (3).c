@@ -7,22 +7,24 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-
-int main()
+void ft_ft(int*nbr, int*x, int y)
 {
-    int n1;
-    int n2;
-    int n3;
-    printf("inserire tre numeri\n");
-    scanf("%d%d%d",&n1,&n2,&n3);
-    
-    if (n1-n2==n2-n3)
-    {
-        printf("numeri in progressione aritmetica\n");
-    }
-else 
-{
-    printf("numeri non in progressione aritmetica\n");
+*nbr=42;
+*x=10;
+y=102;
+printf("stampare il valore effettivo di y nella funzione ft_ft: %d\n",y);
 }
+int main()
+{ 
+    int nbr=1;
+    int x=2;
+    int y=3;
+
+ 
+printf("il valore iniziale: %d %d %d \n",nbr,x,y);
+
+ft_ft(&nbr,&x,y);
+   printf("il valore effettivo dopo aver richiamato ft_ft: %d %d %d \n",nbr,x,y);
+   
     return 0;
 }
