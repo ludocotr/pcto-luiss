@@ -8,20 +8,22 @@ Welcome to GDB Online.
 *******************************************************************************/
 #include <stdio.h>
 
-int main()
-{
-    int numero1;
-    int numero2;
-    int numero3;
-    printf("inserire tre numeri\n");
-    scanf("%d%d%d",&numero1,&numero2,&numero3);
-    
-    if(numero1+numero2>numero3 && numero2+numero3>numero1 && numero3+numero1>numero2)
-    {
-        printf("i numeri possono essere le lunghezze dei tre lati di un triangolo\n");
-    }
-    else
-    printf("i numeri non possono essere le lunghezze dei tre lati di un triangolo\n");
+void fattoriale (int n){}
+int main();
 
+{
+    int N;
+    int tot=1;
+    
+    printf("prendi un numero %d\n", N);
+    scanf("%d", &N);
+    
+    while(N>=1) {
+        tot=tot*N;
+        N=N-1;
+    }
+    {
+        printf("finale %d\n", tot)
+    }
     return 0;
 }
