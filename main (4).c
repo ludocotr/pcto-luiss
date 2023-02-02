@@ -7,23 +7,25 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-
-void fattoriale (int n){}
-int main();
-
-{
-    int N;
-    int tot=1;
-    
-    printf("prendi un numero %d\n", N);
-    scanf("%d", &N);
-    
-    while(N>=1) {
-        tot=tot*N;
-        N=N-1;
-    }
+int ft_ft(int n, int potenza)
+{   
+    int risultato=1;
+    while(potenza>0)
     {
-        printf("finale %d\n", tot)
-    }
-    return 0;
+    
+        risultato=risultato*n;
+        potenza=potenza-1;
+            }
+            return risultato;
+}
+    int main()
+    {
+        int n;
+        int potenza;
+        printf("inserire un numero da elevare alla potenza\n");
+        scanf("%d",&n);
+        printf("inserire una potenza\n");
+        scanf("%d",&potenza);
+        printf("finale %d\n",ft_ft(n,potenza));
+        return 0;
 }
