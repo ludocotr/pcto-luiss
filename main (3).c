@@ -1,30 +1,35 @@
 /******************************************************************************
 
 Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
 #include <stdio.h>
-void ft_ft(int*nbr, int*x, int y)
+int fattoriale(int n)
 {
-*nbr=42;
-*x=10;
-y=102;
-printf("stampare il valore effettivo di y nella funzione ft_ft: %d\n",y);
+    int tot=1;
+    while(n>=1)
+    {
+        tot=tot*n;
+        n=n-1;
+       
+    }
+    
+
+    return tot;
+    
 }
+
 int main()
-{ 
-    int nbr=1;
-    int x=2;
-    int y=3;
+{
+    int n; 
 
- 
-printf("il valore iniziale: %d %d %d \n",nbr,x,y);
+    printf("prendere un numero\n");
+    scanf("%d",&n);
+    printf("finale %d\n",fattoriale(n));
 
-ft_ft(&nbr,&x,y);
-   printf("il valore effettivo dopo aver richiamato ft_ft: %d %d %d \n",nbr,x,y);
-   
-    return 0;
+return 0;
+    
 }
