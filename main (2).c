@@ -7,23 +7,26 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-void ft_ft(int*nbr, int*x, int y)
+void fattoriale(int n)
 {
-*nbr=42;
-*x=10;
-y=102;
+    int tot=1;
+    while (n>=1)
+    {
+        tot=tot*n;
+        n=n-1;
+    }
+    
+    printf("finale %d\n",tot);
+    
 }
+
 int main()
-{ 
-    int nbr=1;
-    int x=2;
-    int y=3;
+{
+    int n;
+    printf("prendere un numero\n");
+    scanf("%d",&n);
+   fattoriale(n);
 
- 
-printf("il valore iniziale: %d %d %d \n",nbr,x,y);
-
-ft_ft(&nbr,&x,y);
-   printf("il valore effettivo dopo aver richiamato ft_ft: %d %d %d \n",nbr,x,y);
-   
+  
     return 0;
 }
