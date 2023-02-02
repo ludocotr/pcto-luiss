@@ -10,21 +10,15 @@ Welcome to GDB Online.
 
 int main()
 {
-    int anno;
-    printf("in che anno sei nato\n");
-    scanf("%d",&anno);
+    int i;
+    i=0;
+    char str[]="ciao";
     
-    if (anno==1969)
+    while(str[i]!='\0')
     {
-    printf("utente nato nell'anno in cui l'uomo è andato sulla Luna\n");
+        i=i+1;
     }
-    else if(anno<1969)
-    {
-    printf("utente nato prima dell'anno in cui l'uomo è andato sulla Luna di %d anni\n",1969-anno);
-    }
-    else
-    {
-    printf("utente nato dopo l'anno in cui l'uomo è andato sulla Luna di %d anni\n", anno-1969);
-    }
-return 0;
+printf("stampare la i di str %d\n",i);
+    
+    return 0;
 }
