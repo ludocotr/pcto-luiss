@@ -7,20 +7,20 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-int main()
-{
-    int lato1;
-    int lato2;
-    int lato3;
-    printf("inserire tre lati\n");
-    scanf("%d%d%d",&lato1,&lato2,&lato3);
 
-    if(lato2==lato3 && lato1==lato2 && lato3==lato1)
-    printf("il triangolo è equilatero\n");
-    else if(lato1!=lato2 && lato2!=lato3 && lato3!=lato1)
-    printf("il triangolo è scaleno\n");
-    else 
-    printf("il triangolo è isoscele\n");
- 
- return 0;
+void carattere (char lettera)
+{
+    //invece di int metti char
+    printf("%c",lettera);
+  
+}
+
+int main()
+{ 
+  char l;
+  printf("inserire una lettera\n");
+  scanf("%c",&l);
+  carattere(l);
+
+    return 0;
 }
