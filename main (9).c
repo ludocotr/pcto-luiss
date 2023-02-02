@@ -8,16 +8,27 @@ Welcome to GDB Online.
 *******************************************************************************/
 #include <stdio.h>
 
-int main()
+void ft_ft(int n1, int n2, int*quoziente, int*resto)
 {
-    int numero;
-    numero=100;
-    
-while(numero>=0)
-{
-    printf("%d\n", numero);
-    numero=numero-2;
+    *quoziente=n1/n2;
+    *resto= n1%n2;
 }
 
+int main()
+{ 
+    int n1 = 0;
+    int n2 = 0;
+    int quoziente;
+    int resto;
+    printf("dividendo %d\n", n1);
+    scanf("%d",&n1);
+    printf("divisore %d\n", n2);
+    scanf("%d",&n2);
+    
+    
+    ft_ft (n1,n2,&quoziente,&resto);
+    printf("risultato %d\n",quoziente);
+    printf("resto %d\n",resto);
+    
     return 0;
 }
