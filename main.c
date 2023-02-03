@@ -8,19 +8,48 @@ Welcome to GDB Online.
 *******************************************************************************/
 #include <stdio.h>
 
+void ft_ft(int*array,int dimensione)
+{
+    int t=0;   
+    int temp;
+    int z;
+    
+    temp=0;
+    t=0;
+    z=1;
+    
+    while(t<dimensione-1)
+    {
+        z=t+1;
+        while(z<dimensione)
+        {
+          if(array[t]>array[z])
+        {
+        temp=array[t];
+        array[t]=array[z];
+        array[z]=temp;
+            
+        }
+        z=z+1;
+
+        }
+        t=t+1; 
+     } 
+     
+}
 int main()
 {
-    printf("inserisci due numeri\n");
-    int numero1;
-    int numero2;    
-scanf("%d",&numero1);
-scanf("%d",&numero2);
-    
-if (numero1%numero2==0)
+    int array[]={5,3,8,1};
+    int dimensione;
+    int t;
+    dimensione=4;
+    ft_ft(array,dimensione);
+    while(t<dimensione)
     {
-printf("il primo numero è multiplo del secondo");
-}
-else
-printf("il primo numero non è multiplo del secondo"); 
-return 0;
+            printf("%d\n",array[t]);
+            t=t+1;
+    }
+
+
+    return 0;
 }
